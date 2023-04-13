@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Player</title>
+</head>
+
+<body>
+    <div class="main">
+        <p id="logo"><i class="fa-solid fa-music fa-beat"></i></p>
+
+        <!-- left part -->
+        <div class="left">
+
+            <!-- song image -->
+            <img id="track_image">
+
+            <div class="volume">
+                <p id="volume_show">90</p>
+
+                <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+                <input type="range" min="0" max="100" value="90" onchange="volume_change()">
+            </div>
+        </div>
+        <!-- right part -->
+        <div class="right">
+            <div class="show_song">
+                <p id="present">1</p>
+                <p>/</p>
+                <p id="total">3</p>
+            </div>
+
+            <!-- song name -->
+            <p id="title">title.mp3</p>
+            <p id="artist">Artist Name</p>
+
+            <!-- middle part -->
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fa fa-backward" aria-hidden="true"></i></button>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button onclick="next_song()" id="next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+            </div>
+            <!-- song time -->
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" id="duration_sider" onchange="change_duration()">
+            </div>
+            <button id="audio" onclick="autoplay_switch()">Auto Play
+            <i class="fa fa-circle-notch" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</body>
+
+</html>
