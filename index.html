@@ -13,6 +13,17 @@
 </head>
 
 <body>
+
+    <div class="bg-image">
+        <section class="fog">
+            <div class="absolute-bg"></div>
+            <div class="fog-container">
+                <div class="fog-img fog-img-first"></div>
+                <div class="fog-img fog-img-second"></div>
+            </div>
+        </section>
+    </div>
+
     <div class="main">
         <p id="logo"><i class="fa-solid fa-music fa-beat"></i></p>
 
@@ -26,7 +37,7 @@
                 <p id="volume_show">90</p>
 
                 <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
-                <input type="range" min="0" max="100" value="90" onchange="volume_change()">
+                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
             </div>
         </div>
         <!-- right part -->
@@ -49,12 +60,16 @@
             </div>
             <!-- song time -->
             <div class="duration">
-                <input type="range" min="0" max="100" value="0" id="duration_sider" onchange="change_duration()">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
             </div>
             <button id="audio" onclick="autoplay_switch()">Auto Play
-            <i class="fa fa-circle-notch" aria-hidden="true"></i></button>
+                <i class="fa fa-circle-notch" aria-hidden="true"></i></button>
         </div>
     </div>
+    <!-- <div class="footer">
+        <p>© 2023 All Rights Reserved</p>
+    </div> -->
+    <script src="index.js"></script>
 </body>
 
 </html>
