@@ -26,9 +26,7 @@ const menuItems = [
 ]
 
 export default function Navbar() {
-    const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-
     const router = useRouter()
 
     const handleDrawerOpen = () => {
@@ -42,14 +40,13 @@ export default function Navbar() {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar position="fixed" open={open}>
+            <AppBar position="fixed">
                 <Toolbar>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         onClick={handleDrawerOpen}
                         edge="start"
-                        sx={{ mr: 2, ...(open && { display: 'none' }) }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -59,18 +56,12 @@ export default function Navbar() {
                 </Toolbar>
             </AppBar>
             <Drawer
-                sx={{
-                    flexShrink: 0,
-                    '& .MuiDrawer-paper': {
-                        boxSizing: 'border-box',
-                    },
-                }}
                 variant="persistent"
                 anchor="left"
                 open={open}
             >
                 <IconButton onClick={handleDrawerClose}>
-                    {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                    {<ChevronLeftIcon />}
                 </IconButton>
                 <List>
                     {menuItems.map(({ text, href }, index) => (

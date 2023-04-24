@@ -1,15 +1,15 @@
 import React from "react";
-import Navbar from "../components/navbar";
+import MainLayout from "../layouts/MainLayout";
 
 const Index = () => {
     return (
         <>
-            <Navbar/>
-            <div className="center">
-                <h1>Добро пожаловать</h1>
-                <h3>Здесь собраны лучшие треки</h3>
-            </div>
-
+            <MainLayout >
+                <div className="center">
+                    <h1>Добро пожаловать</h1>
+                    <h3>Здесь собраны лучшие треки</h3>
+                </div>
+            </MainLayout>
             <style jsx>
                 {`
                     .center {
